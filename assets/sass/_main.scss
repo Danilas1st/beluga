@@ -1,0 +1,55 @@
+img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+}
+
+h1 {
+	font-size: 55px;
+	font-family: $font_3;
+	color: $white;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 30px;
+	}
+}
+// End
+h2, h3, h4, h5, h6 {
+	font-size: 45px;
+	font-family: $font_4;
+	color: $dark;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 26px;
+	}
+}
+
+.global_txt {
+	p, ul, ol, span {
+		@include bp($point_2) {
+			font-size: 16px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	li {
+		@include bp($point_2) {
+			font-size: 14px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		padding-left: 10px;
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '-';
+		}
+	}
+}
+
+

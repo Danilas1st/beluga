@@ -1,0 +1,74 @@
+// Global 
+$header: 60px;
+$footer: 228px;
+
+// Mobile
+$header_mob: 60px;
+$footer_mob: 100px;
+
+//---------------------------------------------fonts
+$font_path: "../fonts/";
+$font_1: 'OpenSans-Regular', sans-serif;
+$font_2: 'OpenSans-Bold', sans-serif;
+$font_3: 'Rubik-SemiBold', serif;
+$font_4: 'Rubik-Bold', serif;
+
+$font_size_base: 18px;
+//---------------------------------------------fonts###
+
+//---------------------------------------------colors
+$white: #fff;
+$black: #000;
+$dark: #202020;
+$grey: #868686;
+$green: #56C300;
+$lightblue: #4BBCF4;
+$darkblue: #134B9A;
+$trans: transparent;
+
+
+
+$color_text_base: $black;
+$color_link_base: $black;
+$body_bg: $white;
+//---------------------------------------------colors###
+
+//---------------------------------------------z-index
+$z-index: (
+	popup : 101,
+	header : 100,
+	footer : 100,
+	el: -1,
+
+);
+//---------------------------------------------z-index###
+
+//---------------------------------------------layout
+$page_width: 1321px;
+
+//---------------------------------------------layout###
+
+//---------------------------------------------global values
+$gl_radius: 24px;
+//---------------------------------------------global values###
+
+//---------------------------------------------media points
+$point_1: 1200px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 640px;
+$point_6: 480px;
+$point_7: 375px;
+$point_8: 320px;
+//---------------------------------------------media points
+
+//---------------------------------------------forms
+
+$input_font_size: $font_size_base;
+$input_border_color: #ccc;
+$input_border_color_active: $dark;
+$input_placeholder_color: rgba($dark, .5);
+$input_text_color: $dark;
+
+//---------------------------------------------forms###

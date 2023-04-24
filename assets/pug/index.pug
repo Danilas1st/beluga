@@ -1,0 +1,197 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_navigation 
+					a(href="#") Главная
+					+icon('arrowright')
+					a(href="#") Установки глубокой биологической очистки
+					+icon('arrowright')
+					p Белуга БИО-4
+				.hero_head 
+					h2 БЕЛУГА БИО-4
+			.hero_main_content
+				.hero_slider--w 
+					.hero_slider--thumb
+						.hero_thumbNavigation 
+							.nav-btn.prev 
+								+icon('prev')
+							.nav-btn.next
+								+icon('next')
+						.hero_sliderThumb.swiper 
+							.swiper-wrapper
+								-for(i = 0; i < 10; i++) 
+									.swiper-slide
+										img(src="i/gallery/gallery1.png", alt="")
+					.hero_slider.swiper 
+						.swiper-wrapper 
+							-for(i = 0 ; i < 10; i++)
+								.swiper-slide 
+									a(href="i/gallery/gallery1.png")
+										img(src="i/gallery/gallery1.png", alt="")
+				.hero_main_description 
+					.description_head
+						h3 Описание товара
+					.description_info 
+						p Кол-во человек: <span>2-4<span>
+						p Габариты: <span>970*1800<span> (ширина/высота)
+						p Объем переработки: <span>0,17м3/сут.<span>
+					.description_txt 
+						p Lorem ipsum dolor sit amet consectetur. Quis quis quis viverra scelerisque eu sit at ac tempor. Bibendum nisi mattis vel ut duis a erat etiam. Eget elit placerat elementum nullam. Ut lectus tortor diam pellentesque enim blandit non nibh. Massa morbi pretium pulvinar amet auctor. Vitae justo sed nulla erat morbi tellus. Aliquam diam nisi lacus elementum viverra dui. At nibh ultrices fames diam in lorem placerat senectus. Id faucibus duis id eros fermentum consequat nibh nisi placerat. Posuere diam sed leo aliquet tellus varius. Tempus ornare elit quisque eget placerat interdum. Ut turpis mauris felis nibh ut quis eget. Id semper eget est rhoncus nisi cras molestie augue. Ante tellus urna amet id lectus etiam leo ut.
+					.description_price 
+						p Цена: 74 500 руб.
+					.description_btn 
+						button(type="button") Заказать
+			.hero_main_tab 
+				ul.tab_list--link 
+					each item, i in ['Характеристики', 'Схема монтажа', 'Дополнительные услуги', 'Видео']
+						if i === 0
+							li(data-tab=`tab-${i}` class="active_tab")=item
+						else 
+							li(data-tab=`tab-${i}` )=item
+				.tab_info.tabcontent(data-tab="tab-0" class="active_tab")
+					.tabcontent_top
+						ul
+							li 
+								.tabcontent_img 
+									+icon('container')
+								.tabcontent_txt 
+									p Объем станции
+								.tabcontent_info 
+									p 1,78 м3
+							li 
+								.tabcontent_img 
+									+icon('supervised')
+								.tabcontent_txt 
+									p Кол-во пользователей
+								.tabcontent_info 
+									p от 1 до 4 человек, что соответствует кол-ву точек водоразбора
+								.tabcontent_char 
+									ul 
+										li
+											.char_item 
+												p 1
+											.char_img 
+												+icon('characteristics1')
+										li
+											.char_item 
+												p 3
+											.char_img 
+												+icon('characteristics2')
+										li
+											.char_item 
+												p 2
+											.char_img 
+												+icon('characteristics3')
+										li
+											.char_item 
+												p 1
+											.char_img 
+												+icon('characteristics4')
+							li 
+								.tabcontent_img 
+									+icon('speed')
+								.tabcontent_txt 
+									p Объем очистки
+								.tabcontent_info 
+									p 0,5 м3/сутки
+							li 
+								.tabcontent_img 
+									+icon('fluent')
+								.tabcontent_txt 
+									p Глубина залегания
+								.tabcontent_info 
+									p 530 мм
+							li 
+								.tabcontent_img 
+									+icon('water')
+								.tabcontent_txt 
+									p Водоотведение
+								.tabcontent_info 
+									p самотеком или принудительно
+							li 
+								.tabcontent_img 
+									+icon('battery')
+								.tabcontent_txt 
+									p Потребляемая эл. энергия
+								.tabcontent_info 
+									p 0,03 кВт/час
+							li 
+								.tabcontent_img 
+									+icon('weight')
+								.tabcontent_txt 
+									p Вес
+								.tabcontent_info 
+									p 145 кг
+							li 
+								.tabcontent_img 
+									+icon('ruler')
+								.tabcontent_txt 
+									p Габаритные размеры
+								.tabcontent_info 
+									p 1380 х 1800 мм (диаметр х высота)
+					.tabcontent_bottom
+						.tabcontent_descr
+							.descr_head
+								h4 Описание
+								p Подтвержденные значения по степени очистки:
+							.descr_tabl 
+								.descr_left
+									.descr_left_head
+										h5 Свойство
+									.descr_left_txt
+										p Эффективность очистки
+								.descr_right 
+									.descr_right_head 
+										h5 Установленные значения
+									.desc_right_txt 
+										p БПК5 — 97,8%
+										p ХПКcr — 93,2%
+										p Взвешенные вещества — 95,8%
+										p N-NH4 — 78,3%
+										p Р — 70,1%
+							p Станция биоочистки ЭКО 1С является самой компактной системой очистки канализационных стоков, успешно применяемая при отсутствии центральной канализации в загородных домах и дачах. Объем системы составляет чуть менее 2-х кубических метров и при этом станция гарантированно очищает 0,5 м3 стоков в сутки. При интенсивном пользовании системой этот объем сопоставим с потреблением воды от 2-х до 4-х человек. Одним из основных достоинств этой станции покупатели отмечают возможность самостоятельного обслуживания без привлечения специалистов. В то же время эксперты уверенно заявляют о надежности системы и непревзойденном качестве очистки благодаря особой системе переливов поступающих масс.
+						.tabcontent_recomend 
+							h5 Рекомендации по монтажу
+							p К вопросу монтажа стоит подойти не менее ответственно, чем к выбору самой системы очистки сточных вод. В зависимости от расположения участка, на котором будет устанавливаться станция АвгустЭКО 1С, возможны несколько вариантов монтажа и способов отведения очищенной воды.
+							p Отвод самотеком возможен при наличии естественного уклона участка. Очищенная вода перемещается по заложенным в грунт трубам до места сброса или места накопления. Такой вариант наименее затратный и, как правило, наиболее предпочтительный среди покупателей.
+							p При желании или необходимости очищенная вода может быть направлена в фильтрационный колодец, представляющий собой вкопанные бетонные кольца. Поступающая в колодец вода в полном объеме впитывается в грунт и не требует последующего удаления из накопителя.
+							p В некоторых случая при монтаже требуется установка КНС - канализационная насосная станция. Задачей этого дополнительно оборудования является принудительная транспортировка поступающих стоков до очистной станции. Как правило, необходимость в КНС возникает при значительной глубине залегания коммуникаций.
+				.tab_info.tabcontent(data-tab="tab-1")
+					img(src="i/scheme.png", alt="")
+				.tab_info.tabcontent(data-tab="tab-2")
+					.addition_tabl 
+						.addition_left
+							.addition_left_head
+								h5 Наименование услуги
+							.addition_left_txt
+								p Доставка
+								p Шеф-монтаж*
+								p Монтаж под ключ*
+						.addition_right 
+							.addition_right_head 
+								h5 Стоимость
+							.addition_right_txt 
+								p Ногинск и Ногинский район - 3500 руб. <br>Далее - 40 руб/км, начиная от нулевой отметки
+								p 9 900 руб.
+								p 34 000 / 39 000 рублей (лето / зима)
+					.addition_shef_info 
+						h5 Шеф-монтаж включает в себя:
+						p Обеспечение заказчика исчерпывающей информацией по правильной подготовке котлована, коммуникаций, расходных метриалов и т.п., предназначенных для установки конкретного вида очистного сооружения. Представитель компании Август-Эко производит следующие работы: подключение системы, соединение воздуходувки с механизмом распределения воздуха, регулировка эрлифта, настройка режима работы компрессора, первый пуск системы. Заказчик самостоятельно выполняет работы по выкапыванию/засыпке котолована, опусканию емкости в котлован, подключению к электропитанию и коммуникациям.
+						p Цена "шеф-монтажа" может быть изменена только ввиду значительной удаленности места установки.
+					.addition_installation_info
+						h5 Монтаж под ключ:
+						p Цена "под ключ" включает в себя все работы, необходимые для полноценного монтажа системы и ввода её в эксплуатацию. Возможно отклонение от указанной стомиости в зависимости от типа грунта (песчаный, суглинок, глина, плывун). Подтверждение актуальности указанной цены или её увеличение возможно только при выезде инеженера на место установки.
+					.addition_price_info
+						h5 В стоимость монтажа "под ключ" и "шеф-монтажа" не включены расходные материалы(трубы, кабеля, фиксирующие материалы и т.д.).
+						p За более подробной информацией обращайтесь к сотрудникам компании.
+				.tab_info.tabcontent(data-tab="tab-3")
+					.tabcontent_video
+						a(href="https://youtu.be/dqtyVVj3Ykk" data-fancybox="video")
+							img(src="i/scheme.png", alt="")
+							button(type="button")
+								+icon('play')
