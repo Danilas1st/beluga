@@ -44,6 +44,9 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 106px;
+	@include bp(820px) {
+		flex-direction: column;
+	}
 	@include bp($point_5) {
 		flex-direction: column;
 		margin-bottom: 50px;
@@ -218,6 +221,9 @@
 			background: $white;
 		}
 	}
+	@include bp(820px) {
+		font-size: 14px;
+	}
 }
 .tab_info {
 }
@@ -243,9 +249,11 @@
 	@include bp($point_2) {
 		margin-right: 30px;
 	}
+	@include bp(820px) {
+		margin-bottom: 30px;
+	}
 	@include bp($point_5) {
 		margin: 0 0 30px 0;
-
 	}
 }
 
@@ -266,6 +274,10 @@
 	width: 200px;
 	margin-right: 50px;
 	font-size: 16px;
+	@include bp(820px) {
+		width: 125px;
+		margin-right: 85px;
+	}
 	@include bp($point_5) {
 		font-size: 14px;
 		width: 400px;
@@ -277,6 +289,12 @@
 .tabcontent_info {
 	margin-right: 150px;
 	font-size: 16px;
+	@include bp(820px) {
+		margin-right: 0;
+		p {
+			font-size: 14px;
+		}
+	}
 	@include bp($point_5) {
 		text-align: right;
 		margin: 0;
@@ -381,6 +399,9 @@
 }
 .tabcontent_bottom {
 	display: flex;
+	@include bp(820px) {
+		flex-direction: column;
+	}
 	@include bp($point_5) {
 		flex-direction: column;
 	}
@@ -390,6 +411,9 @@
 	p {
 		max-width: 705px;
 		font-size: 16px;
+	}
+	@include bp(820px) {
+		margin-bottom: 50px;
 	}
 	@include bp($point_5) {
 		margin-bottom: 50px;
@@ -472,6 +496,9 @@
 		font-size: 16px;
 		margin-bottom: 10px;
 	}
+	@include bp(820px) {
+		margin-bottom: 50px;
+	}
 	@include bp($point_5) {
 		p {
 			font-size: 14px;
@@ -486,6 +513,9 @@
 	}
 }
 .addition_left {
+	@include bp(768px) {
+		width: 350px;
+	}
 	@include bp($point_5) {
 		width: 167.5px;
 	}
@@ -497,6 +527,9 @@
 		font-size: 16px;
 		margin-left: 30px;
 		padding: 19px;
+	}
+	@include bp(768px) {
+
 	}
 	@include bp($point_5) {
 		h5 {
@@ -516,6 +549,16 @@
 		border-right: 1px solid #D4F1F9;
 		border-left: 1px solid #D4F1F9;
 	}
+	@include bp(768px) {
+		p {
+			&:nth-child(1) {
+				padding: 19px 25px 73px 30px;
+			}
+			&:nth-child(2) {
+				padding: 18.8px 30px;
+			}
+		}
+	}
 	@include bp($point_5) {
 		width: 160px;
 		p {
@@ -531,6 +574,9 @@
 	}
 }
 .addition_right {
+	@include bp(768px) {
+		width: 378px;
+	}
 	@include bp($point_5) {
 		width: 175px;
 	}
@@ -563,6 +609,9 @@
 	}
 	br {
 		margin-top: 10px;
+	}
+	@include bp(768px) {
+		width: 378px;
 	}
 	@include bp($point_5) {
 		width: 175px;
@@ -640,6 +689,13 @@
 	height: 55px;
 	padding: 15px;
 	border-radius: 20px;
+	@include bp($point_5) {
+		width: 60px;
+		height: 40px;
+		padding: 13px;
+		border-radius: 15px;
+		right: 40%;
+	}
 }
 
 
