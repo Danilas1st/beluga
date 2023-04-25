@@ -16,6 +16,15 @@
 	p {
 		font-size: 16px;
 	}
+	@include bp($point_5) {
+		margin-bottom: 15px;
+		a {
+			font-size: 14px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
 }
 .icon {
 	margin-right: 5px;
@@ -35,12 +44,22 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 106px;
+	@include bp($point_5) {
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
 }
 .hero_slider {
 	max-width: 500px;
 }
 .hero_slider--thumb {
 	position: relative;
+	@include bp($point_2) {
+		margin-right: 30px;
+	}
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .prev {
 	background: #E9E9E9;
@@ -77,6 +96,9 @@
 .slider_main {
 }
 .swiper-wrapper {
+	@include bp($point_2) {
+		width: 130px;
+	}
 }
 .swiper-slide {
 	width: 130px;
@@ -93,20 +115,33 @@
 		font-size: 22px;
 		font-family: $font_2;
 	}
+	@include bp($point_5) {
+		margin-bottom: 15px;
+		h3 {
+			font-size: 18px;
+		}
+	}
 }
 .description_info {
 	margin-bottom: 30px;
 	p {
 		color: $grey;
 		margin-bottom: 10px;
+		font-size: 16px;
 	}
 	span {
 		color: $black;
+	}
+	@include bp($point_5) {
+		margin-bottom: 20px;
 	}
 }
 .description_txt {
 	margin-bottom: 30px;
 	font-size: 16px;
+	@include bp($point_5) {
+		margin-bottom: 20px;
+	}
 }
 .description_price {
 	margin-bottom: 40px;
@@ -114,6 +149,12 @@
 		color: $black;
 		font-size: 22px;
 		font-family: $font_2;
+	}
+	@include bp($point_5) {
+		margin-bottom: 30px;
+		p {
+			font-size: 18px;
+		}
 	}
 }
 .description_btn {
@@ -126,9 +167,18 @@
 		width: 100%;
 		padding: 21px 20px;
 		border-radius: 30px 0px;
+		font-size: 16px;
+	}
+	@include bp($point_5) {
+		button {
+
+		}
 	}
 }
 .hero_main_tab {
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .tab {
 	overflow: hidden;
@@ -190,6 +240,13 @@
 	max-width: 660px;
 	display: flex;
 	align-items: flex-start;
+	@include bp($point_2) {
+		margin-right: 30px;
+	}
+	@include bp($point_5) {
+		margin: 0 0 30px 0;
+
+	}
 }
 
 .hero_sliderThumb  {
@@ -199,6 +256,9 @@
 }
 .tabcontent_img {
 	margin-right: 20px;
+	@include bp($point_5) {
+		margin-right: 15px;
+	}
 }
 .icon-container {
 }
@@ -206,10 +266,25 @@
 	width: 200px;
 	margin-right: 50px;
 	font-size: 16px;
+	@include bp($point_5) {
+		font-size: 14px;
+		width: 400px;
+		// margin: 0;
+		margin-right: 30px;
+		width: 120px;
+	}
 }
 .tabcontent_info {
 	margin-right: 150px;
 	font-size: 16px;
+	@include bp($point_5) {
+		text-align: right;
+		margin: 0;
+		font-size: 14px;
+	}
+	li {
+		align-items: center;
+	}
 }
 .icon-supervised {
 }
@@ -222,9 +297,13 @@
 		border-radius: 10px;
 		width: 60px;
 		height: 32px;
-		// border: 1px solid $lightblue;
 		&:not(:last-child) {
 			margin-right: 10px;
+		}
+	}
+	@include bp($point_5) {
+		li {
+			flex-direction: row!important;
 		}
 	}
 }
@@ -237,6 +316,22 @@
 		&:nth-of-type(even) {
 			background: #E7F6FD;
 		}
+	}
+	@include bp($point_5) {
+		margin-bottom: 40px;
+		li {
+			&:nth-child(2) {
+				flex-direction: column;
+			}
+		}
+	}
+}
+.tabcontent_left {
+	display: flex;
+	align-items: center;
+	@include bp($point_5) {
+		align-items: flex-start;
+		margin-bottom: 15px;
 	}
 }
 .char_item {
@@ -286,12 +381,21 @@
 }
 .tabcontent_bottom {
 	display: flex;
+	@include bp($point_5) {
+		flex-direction: column;
+	}
 }
 .tabcontent_descr {
 	margin-bottom: 100px;
 	p {
 		max-width: 705px;
 		font-size: 16px;
+	}
+	@include bp($point_5) {
+		margin-bottom: 50px;
+		p {
+			font-size: 14px;
+		}
 	}
 }
 .descr_head {
@@ -303,6 +407,13 @@
 	}
 	p {
 		font-size: 16px;
+	}
+	@include bp($point_5) {
+		margin-bottom: 15px;
+		h4 {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
 	}
 }
 .descr_tabl {
@@ -320,6 +431,9 @@
 	margin-bottom: 19px;
 	h5 {
 		font-size: 16px;
+	}
+	@include bp($point_5) {
+		padding: 30px;
 	}
 }
 .descr_left_txt {
@@ -358,12 +472,23 @@
 		font-size: 16px;
 		margin-bottom: 10px;
 	}
+	@include bp($point_5) {
+		p {
+			font-size: 14px;
+		}
+	}
 }
 .addition_tabl {
 	display: flex;
 	margin-bottom: 50px;
+	@include bp($point_5) {
+		margin-bottom: 30px;
+	}
 }
 .addition_left {
+	@include bp($point_5) {
+		width: 167.5px;
+	}
 }
 .addition_left_head {
 	background: #E7F6FD;
@@ -372,6 +497,12 @@
 		font-size: 16px;
 		margin-left: 30px;
 		padding: 19px;
+	}
+	@include bp($point_5) {
+		h5 {
+			padding: 8px;
+			font-size: 14px;
+		}
 	}
 }
 .addition_left_txt {
@@ -385,8 +516,24 @@
 		border-right: 1px solid #D4F1F9;
 		border-left: 1px solid #D4F1F9;
 	}
+	@include bp($point_5) {
+		width: 160px;
+		p {
+			&:nth-child(1) {
+				padding: 43px 25px 51px 30px;
+			}
+			&:last-child {
+				padding: 29.4px 30px;
+			}
+			font-size: 14px;
+			padding: 20px 30px;
+		}
+	}
 }
 .addition_right {
+	@include bp($point_5) {
+		width: 175px;
+	}
 }
 .addition_right_head {
 	background: #E7F6FD;
@@ -395,6 +542,12 @@
 		font-size: 16px;
 		margin-left: 30px;
 		padding: 19px 0;
+	}
+	@include bp($point_5) {
+		h5 {
+			font-size: 14px;
+			padding: 17px 0;
+		}
 	}
 }
 .addition_right_txt {
@@ -411,6 +564,15 @@
 	br {
 		margin-top: 10px;
 	}
+	@include bp($point_5) {
+		width: 175px;
+		p {
+			&:nth-child(1) {
+				padding: 5px 0 15px 15px;
+			}
+			font-size: 14px;
+		}
+	}
 }
 .addition_shef_info {
 	margin-bottom: 50px;
@@ -422,6 +584,12 @@
 		font-size: 16px;
 		margin-bottom: 10px;
 	}
+	@include bp($point_5) {
+		margin-bottom: 30px;
+		p {
+			font-size: 14px; 
+		}
+	}
 }
 .addition_installation_info {
 	margin-bottom: 50px;
@@ -432,6 +600,12 @@
 	p {
 		font-size: 16px;
 	}
+	@include bp($point_5) {
+		margin-bottom: 30px;
+		p {
+			font-size: 14px; 
+		}
+	}
 }
 .addition_price_info {
 	margin-bottom: 100px;
@@ -441,6 +615,15 @@
 	}
 	p {
 		font-size: 16px;
+	}
+	@include bp($point_5) {
+		margin-bottom: 30px;
+		h5 {
+			margin-bottom: 30px;
+		}
+		p {
+			font-size: 14px; 
+		}
 	}
 }
 .tabcontent_video {
@@ -457,4 +640,42 @@
 	height: 55px;
 	padding: 15px;
 	border-radius: 20px;
+}
+
+
+.hero_main_mob {
+	display: none;
+	@include bp($point_5) {
+		display: block;
+	}
+}
+.mob_char_head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #E9E9E9;
+	width: 100%;
+	padding: 14px 29px 14px 25px;
+	h4 {
+		font-size: 14px;
+		color: #868686;
+	}
+}
+.mob_btn {
+	svg {
+		fill: #868686;
+	}
+}
+.mob_char {
+	&.active_mod {
+		.mob_btn {
+			svg {
+				fill: $black;
+			}
+			transform: rotate(180deg);
+		}
+	}
+} 
+.icon-next {
+	rotate: -90deg;
 }

@@ -9,6 +9,9 @@ html {
 	@include bp($point_2) {
 		font-size: 10px;
 	}
+	@include bp($point_5) {
+		font-size: 10px;
+	}
 }
 
 body {
