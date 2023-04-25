@@ -39,6 +39,9 @@
 		font-size: 32px;
 		color: $darkblue;
 	}
+	@include bp($point_2) {
+		margin-bottom: 30px;
+	}
 }
 .hero_main_content {
 	display: flex;
