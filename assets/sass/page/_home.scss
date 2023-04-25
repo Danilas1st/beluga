@@ -167,7 +167,7 @@
 	display: flex;
 	justify-content: flex-start;
 	max-width: 209px;
-	button {
+	button, input[type="submit"] {
 		color: $white;
 		background: linear-gradient(98.68deg, rgba(156, 237, 32, 0.7) 22.69%, rgba(160, 240, 41, 0) 77.01%), #7FC805;
 		width: 100%;
@@ -177,8 +177,8 @@
 		font-family: $font_2;
 	}
 	@include bp($point_5) {
-		button {
-
+		button, input[type="submit"] {
+			font-size: 16px;
 		}
 	}
 }
@@ -191,7 +191,7 @@
 	overflow: hidden;
 	border: 1px solid #E9E9E9;
 	background-color: #E9E9E9;
-	button {
+	button, input[type="submit"] {
 		background-color: inherit;
     float: left;
     border: none;
@@ -285,7 +285,6 @@
 	@include bp($point_5) {
 		font-size: 14px;
 		width: 400px;
-		// margin: 0;
 		margin-right: 30px;
 		width: 120px;
 	}
@@ -569,6 +568,9 @@
 			&:nth-child(1) {
 				padding: 43px 25px 51px 30px;
 			}
+			&:nth-child(2) {
+				padding: 20.4px 30px;
+			}
 			&:last-child {
 				padding: 29.4px 30px;
 			}
@@ -680,7 +682,10 @@
 	}
 }
 .tabcontent_video {
+	display: flex;
 	position: relative;
+	align-items: center;
+	justify-content: center;
 }
 .icon-play {
 	position: absolute;
