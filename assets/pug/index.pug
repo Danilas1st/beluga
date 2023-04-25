@@ -31,7 +31,7 @@ block content_block
 						.swiper-wrapper 
 							-for(i = 0 ; i < 10; i++)
 								.swiper-slide 
-									a(href="i/gallery/gallery1.png")
+									a(href="i/gallery/gallery1.png" data-fancybox="gallery")
 										img(src="i/gallery/gallery1.png", alt="")
 				.hero_main_description 
 					.description_head
@@ -193,8 +193,8 @@ block content_block
 						p За более подробной информацией обращайтесь к сотрудникам компании.
 				.tab_info.tabcontent(data-tab="tab-3")
 					.tabcontent_video
-						a(href="https://youtu.be/dqtyVVj3Ykk" data-fancybox="video")
-							img(src="i/scheme.png", alt="")
+						a(href="https://youtu.be/dqtyVVj3Ykk" data-fancybox)
+							img(src="i/video.png", alt="")
 							button(type="button")
 								+icon('play')
 			.hero_main_mob 
@@ -363,8 +363,8 @@ block content_block
 									+icon('arrowright')
 						.mob_char_info 
 							.tabcontent_video
-								a(href="https://youtu.be/dqtyVVj3Ykk" data-fancybox="video")
-									img(src="i/scheme.png", alt="")
+								a(href="https://youtu.be/dqtyVVj3Ykk" data-fancybox)
+									img(src="i/video.png", alt="")
 									button(type="button")
 										+icon('play')
 
